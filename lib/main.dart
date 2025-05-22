@@ -41,10 +41,11 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        cardTheme: CardTheme(margin: EdgeInsets.all(16),
+        cardTheme: CardTheme(
+          margin: EdgeInsets.all(16),
           color: Colors.white,
-          surfaceTintColor: Colors.white,elevation: 30,
-
+          surfaceTintColor: Colors.white,
+          elevation: 30,
         ),
       ),
       initialRoute: HomeScreen.routeName,
