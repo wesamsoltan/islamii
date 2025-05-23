@@ -275,7 +275,7 @@ class Qurantabs extends StatelessWidget {
                   number: versesNumber[index],
                 ),
             separatorBuilder: (context, index) => Divider(height: 0),
-            itemCount: 114,
+            itemCount: suraNames.length,
           ),
         ),
       ],
