@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:islamii/home/tabs/Hadeth.dart';
 
+import '../home/style/AppStyle.dart';
+
 class AhadethDetailsScreens extends StatelessWidget {
   static const String routeName = "ahadeth";
+
   const AhadethDetailsScreens({super.key});
 
   @override
@@ -11,7 +14,11 @@ class AhadethDetailsScreens extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/background.png"),
+          image: AssetImage(
+            AppStyle.isDark
+                ? "assets/images/homeDarkBackGround.png"
+                : "assets/images/background.png",
+          ),
           fit: BoxFit.fill,
         ),
       ),
@@ -24,7 +31,7 @@ class AhadethDetailsScreens extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Text(
                     args.contant,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ),
               ),

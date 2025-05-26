@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamii/Ahadeth_details/ahadeth_details_screens.dart';
 import 'package:islamii/home/tabs/Hadeth.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class Ahadethtab extends StatefulWidget {
   @override
@@ -20,8 +22,8 @@ class _AhadethtabState extends State<Ahadethtab> {
             Expanded(child: Image.asset("assets/images/ahadeth_image.png")),
             Divider(),
             Text(
-              "ahadeth",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+              AppLocalizations.of(context)!.ahadeth,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
             Divider(),
             Expanded(
@@ -34,10 +36,7 @@ class _AhadethtabState extends State<Ahadethtab> {
                       },
                       child: Text(
                         ahadethList[index].title,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 25,
-                        ),
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w400),
                         textAlign: TextAlign.center,
                       ),
                     ),

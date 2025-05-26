@@ -24,11 +24,11 @@ class Quransurawidget extends StatelessWidget {
             child: Text(
               name,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 25, ),
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w400),
             ),
           ),
           Container(
-            color: ColorScheme.of(context).primary,
+            color: ColorScheme.of(context).tertiary,
             width: 3,
             height: .08 * height,
           ),
@@ -36,7 +36,7 @@ class Quransurawidget extends StatelessWidget {
             child: Text(
               number.toString(),
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 25, ),
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w400),
             ),
           ),
         ],
