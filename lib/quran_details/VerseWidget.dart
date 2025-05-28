@@ -9,7 +9,7 @@ class Versewidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "$verse($verseNumber)",
-      style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
+      style: Theme.of(context).textTheme.bodyMedium,
       textAlign: TextAlign.center,textDirection: TextDirection.rtl,
     );
   }
