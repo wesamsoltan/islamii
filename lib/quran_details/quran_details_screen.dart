@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamii/quran_details/VerseWidget.dart';
 
+import '../home/style/AppStyle.dart';
+
 class QuranDetailsScreen extends StatefulWidget {
   static String routeName = "QuranDetailsScreen";
   @override
@@ -17,7 +19,9 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/background.png"),
+          image: AssetImage( AppStyle.isDark
+              ? "assets/images/homeDarkBackGround.png"
+              : "assets/images/background.png",),
           fit: BoxFit.fill,
         ),
       ),
